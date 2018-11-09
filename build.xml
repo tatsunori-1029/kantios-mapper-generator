@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="kantios" default="generate">
+	<target name="generate">
+		<exec executable="cmd.exe">
+			<arg value="/c" />
+			<arg line="java -cp C:\Users\IBM_ADMIN\.m2\repository\org\mybatis\generator\mybatis-generator-core\1.3.7\mybatis-generator-core-1.3.7.jar org.mybatis.generator.api.ShellRunner" />
+			<arg line="-configfile generatorConfig.xml" />
+			<arg line="-overwrite" />
+		</exec>
+	</target>
+</project>

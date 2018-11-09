@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+	<classPathEntry location="lib/derby-10.14.2.0.jar"/>
+
+	<context id="kantios" targetRuntime="MyBatis3">
+		
+		<plugin type="org.mybatis.generator.plugins.SerializablePlugin"></plugin>
+		<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"></plugin>
+	
+		<commentGenerator>
+			<property name="suppressDate" value="true"/>
+			<property name="suppressAllComments" value="true"/>
+		</commentGenerator>
+
+		<jdbcConnection connectionURL="jdbc:derby:db" driverClass="org.apache.derby.jdbc.EmbeddedDriver"
+			userId="dbUser" password="dbPassword" />
+
+		<javaModelGenerator targetPackage="app.saiou.kantios.entity" targetProject="src/test/java" />
+
+		<sqlMapGenerator targetPackage="app.saiou.kantios.mapper" targetProject="src/test/java" />
+
+		<javaClientGenerator targetPackage="app.saiou.kantios.mapper" targetProject="src/test/java" type="XMLMAPPER" />
+
+		<table tableName="TB_%"
+			enableSelectByExample="false"
+			enableDeleteByExample="false"
+			enableCountByExample="false"
+			enableUpdateByExample="false"
+			selectByExampleQueryId="false"
+			selectByPrimaryKeyQueryId="false"
+			modelType="flat">
+		</table>
+
+	</context>
+</generatorConfiguration>
